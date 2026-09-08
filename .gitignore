@@ -1,0 +1,8 @@
+# 不提交容器运行密码
+.env
+
+# 不提交后端运行时配置
+deploy/backend/bootstrap.yaml
+
+# 不提交后端配置缓存
+backend/config/backup_cache.yaml

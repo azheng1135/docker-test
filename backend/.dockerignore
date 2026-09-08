@@ -1,0 +1,24 @@
+# Git 和编辑器文件
+.git
+.gitignore
+.vscode
+.idea
+
+# 日志和临时文件
+*.log
+logs
+tmp
+
+# 本地编译结果
+keystonego
+*.exe
+
+# 文档不进入镜像
+docs
+*.md
+
+# 敏感配置绝对不能进入镜像
+.env
+.env.*
+config/bootstrap.yaml
+config/backup_cache.yaml

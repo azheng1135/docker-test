@@ -1,0 +1,39 @@
+app:
+  name: keystonego
+  env: dev
+  port: 8080
+
+jwt:
+  secret: "keystone_secret_key_2026"
+  expire: 7200
+
+database:
+  master_dsn: "root:root@tcp(127.0.0.1:3306)/keystone?charset=utf8mb4&parseTime=True&loc=Local"
+  # slave_dsns:  # 可选，配置从库用于读写分离
+  #   - "root:123456@tcp(127.0.0.1:3307)/keystone?charset=utf8mb4&parseTime=True&loc=Local"
+  max_open_conns: 100
+  max_idle_conns: 50
+  max_lifetime: 1800
+  max_idle_time: 900
+
+redis:
+  addr: "127.0.0.1:6379"
+  password: ""
+  db: 0
+  pool_size: 100
+  min_idle_conns: 10
+
+log:
+  level: "info"
+
+system_switches:
+  enable_register: true
+  maintenance_mode: false
+
+oauth:
+  github:
+    client_id: "Iv23liKlp3oSo6fxUwsX"
+    client_secret: "d5583e635d6010249c9764896a55386ee62b750e"
+    redirect_uri: "http://localhost:8080/api/v1/auth/oauth/github/callback"
+    frontend_url: "http://localhost:3002"
+    http_proxy: "http://127.0.0.1:11888"

@@ -1,0 +1,17 @@
+# 本地依赖和构建结果
+node_modules
+dist
+
+# Git 和编辑器文件
+.git
+.gitignore
+.vscode
+.idea
+
+# 日志和本地配置
+*.log
+.env
+.env.*
+
+# 系统文件
+.DS_Store
